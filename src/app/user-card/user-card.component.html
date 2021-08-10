@@ -1,0 +1,19 @@
+<div #container class="user-card-container">
+    <a [routerLink]="link">
+        <div class="user-card-content">
+            <h1 class="user-card-title">
+                {{user.first_name}} {{user.last_name}}
+            </h1>
+            <div class="user-card-body-container">
+                <img class="img" src="{{user.avatar}}">
+                <div #bodyText class="user-card-body">
+                    <p>email: {{user.email}}</p>
+        
+                    <div #truncator class="fade-out-truncation"></div>
+                </div>
+            </div>
+            
+        </div>
+    </a>
+    <div class="x-button" (click)="onXButtonClick()"></div>
+</div>

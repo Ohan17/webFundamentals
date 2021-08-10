@@ -1,0 +1,6 @@
+<div class="main-container">
+    <div class="user-list" *ngFor="let u of userList; index as i">
+        <app-user-card [user]="u" [link]="i.toString()" [@itemAnim] (delete)="deleteUser(i)"></app-user-card>
+    </div>
+    <button class="button floating-add-button is-primary" routerLink="new">Add</button>
+</div>

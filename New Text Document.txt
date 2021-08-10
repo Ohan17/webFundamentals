@@ -1,0 +1,12 @@
+Step to compile:
+
+Open terminal in project folder
+
+Run 
+`cd ./AngularDemo`
+
+Run 
+`npm install`
+
+Run 
+`ng serve`

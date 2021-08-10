@@ -1,0 +1,36 @@
+<div class="form-container">
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+        <div class="field">
+            <label class="label">First name</label>
+            <div class="control">
+                <input type="text" name="first_name" [ngModel]="user.first_name" required class="input">
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Last name</label>
+            <div class="control">
+                <input type="text" name="last_name" [ngModel]="user.last_name" required class="input">
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+                <input type="text" name="email" [ngModel]="user.email" class="input">
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Avatar url</label>
+            <div class="control">
+                <input type="text" name="avatar" [ngModel]="user.avatar" class="input">
+            </div>
+        </div>
+        <div class="field is-grouped is-pulled-right">
+            <div class="control">
+                <button class="button is-text" type="button" (click)="cancel()">Back</button>
+            </div>
+            <div class="control">
+                <button class="button is-success" type="submit" [disabled]="!userForm.valid">Save</button>
+            </div>
+        </div>
+    </form>
+</div>
